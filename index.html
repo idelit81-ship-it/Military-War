@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0e0d">
+<title>BATTLEFRONT — MILITARY WAR</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+  body {
+    background: #0b0e0d;
+    color: #f1f2ed;
+    font-family: "Bahnschrift", "Arial Narrow", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+  }
+  main {
+    position: relative;
+    width: 100%; height: 100%;
+    background: linear-gradient(112deg, #0b0e0d 10%, #111713 56%, #0b0f0d 100%);
+    overflow: hidden;
+  }
+  .title {
+    position: absolute;
+    top: 44%; left: 10.6%; right: 5%;
+    transform: translateY(-50%);
+  }
+  h1 {
+    margin: 0;
+    color: #f1f2ed;
+    font-family: "Bahnschrift SemiCondensed", "Bahnschrift", "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(48px, 7.3vw, 128px);
+    font-weight: 700;
+    letter-spacing: -.042em;
+    line-height: 1.03;
+    white-space: nowrap;
+    opacity: 0;
+    animation: reveal .9s .15s ease-out forwards;
+  }
+  p {
+    margin: 24px 0 0;
+    color: #b9c5b6;
+    font-size: clamp(14px, 1.3vw, 21px);
+    font-weight: 500;
+    letter-spacing: .39em;
+    white-space: nowrap;
+    opacity: 0;
+    animation: reveal .9s .4s ease-out forwards;
+  }
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (max-width: 780px) {
+    .title { left: 7%; top: 44%; right: 4%; }
+    h1 { font-size: clamp(31px, 9vw, 70px); }
+    p { margin-top: 16px; font-size: clamp(11px, 2.7vw, 17px); letter-spacing: .24em; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    h1, p { animation: none; opacity: 1; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="title">
+      <h1>BATTLEFRONT</h1>
+      <p>MILITARY WAR</p>
+    </div>
+  </main>
+</body>
+</html>
